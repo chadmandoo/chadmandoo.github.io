@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZSVGE7YY2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-EZSVGE7YY2');
+    </script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,12 +57,16 @@
             <img src="/images/Settings_dpm_dump.png" alt="Drupal 10 Settings Utility Class - DPM Dump" class="img-fluid">
 
             <h3>Why use settings over configuration?</h3>
-
             <p>If you are familiar with Drupal configuration management, you may question the benefits of using settings over configuration. One key advantage is that settings can prevent configuration from being overwritten per environment. Additionally, using settings to store sensitive information, such as API keys, provides an added layer of security by preventing them from being committed to a repository.</p>
 
             <h3>Best Practices</h3>
             <p>It is important to note that while the settings.local.php file is not required, it is not recommended to store settings directly in the settings.php for security reasons, particularly if the code is being committed to a repository. A more secure alternative is to use environmental variables. Here is an example on how to grab environmental variables on Acquia Cloud.</p>
             <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fchadmandoo%2Fchadmandoo.github.io%2Fblob%2Fmain%2Fcode_samples%2Fsettings_utility%2Fsettings_utility_env.php&style=github-dark-dimmed&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+
+            <h3>Search phrases</h3>
+            <h6>How to use custom settings in Drupal 8 / 9 / 10</h6>
+            <h6>How to use variable_set in Drupal 8 / 9 / 10</h6>
+            <h6>How to use variable_get in Drupal 8 / 9 / 10</h6>
         </div>
     </section>
     <footer>
@@ -63,4 +76,5 @@
 
 </main>
 </body>
+
 </html>
