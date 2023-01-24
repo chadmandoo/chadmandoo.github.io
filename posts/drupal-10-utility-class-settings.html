@@ -25,15 +25,16 @@
         </div>
         <div class="content">
             <h3>Introduction</h3>
-            <p>Drupal 10 provides a utility class, Settings, which provides a simple and secure way to manage read only settings for your Drupal site. This class allows you to store your site's configuration settings in a single location, making it easy to manage and update them as needed.</p>
+            <p>Drupal 10 provides a utility class, aptly named <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Site%21Settings.php/class/Settings/10" target="_blank">Settings</a>, which provides a simple and secure way to manage read only settings for your Drupal site. This class allows you to store your site's configuration settings in a single location, making it easy to manage and update them as needed.</p>
 
             <h3>Setup</h3>
-            <p>To take advantage of the Settings class securely, simply create a new file called settings.local.php in your site's /sites/default directory. Add a code to include this file in your settings.php file and add your site specific settings (see examples b . This file should contain the settings for your site, such as your database connection details and your site's base URL.</p>
+            <p>To take advantage of the Settings class securely, simply create a new file called settings.local.php in your site's /sites/default directory. Add a code to include this file in your settings.php file and add your site specific settings (see examples below) . This file should contain the settings for your site, such as API keys or other environment specific settings.</p>
 
             <h3>Usage</h3>
             <p>Once you have created your settings.local.php file, you can then use the Settings.php class to access and manage your site's settings. For example, you can use the get() method to retrieve a specific setting, or the set() method to update a setting. You can also use the getAll() method to retrieve all of your site's settings at once. I will show you how to use these methods in the following examples.</p>
 
-            <h3>Conclusion</h3>
+            <h3>Best Practices</h3>
+            <p>Note the settings.local.php is not required and you can store settings directly in the settings.php but it is not advised for security purposes. Especially if you are committing code to a repository. If you are using Acquia Cloud you can store these items as environmental variables and retrieve them.</p>
         </div>
     </section>
     <footer>
