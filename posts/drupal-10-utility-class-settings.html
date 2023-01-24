@@ -39,19 +39,19 @@
             <h3>Setup</h3>
             <p>To take advantage of the Settings class securely, simply create a new file called settings.local.php in your site's /sites/default directory. Add a code to include this file in your settings.php file and add your site specific settings (see examples below) . This file should contain the settings for your site, such as API keys or other environment specific settings.</p>
 
-            <p>Including your settings.local.php file.</p>
+            <p class="center">Including your settings.local.php file.</p>
             <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fchadmandoo%2Fchadmandoo.github.io%2Fblob%2Fmain%2Fcode_samples%2Fsettings_utility%2Fsettings_utility_include_local.php&style=github-dark-dimmed&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
 
-            <p>Initiating a setting value in your settings.local.php file.</p>
+            <p class="center">Initiating a setting value in your settings.local.php file.</p>
             <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fchadmandoo%2Fchadmandoo.github.io%2Fblob%2Fmain%2Fcode_samples%2Fsettings_utility%2Fsettings_utility_set.php&style=github-dark-dimmed&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
 
             <h3>Usage</h3>
             <p>Once you have created your settings.local.php file, you can then use the Settings.php class to access and manage your site's settings. For example, you can use the get() method to retrieve a specific setting, or the set() method to update a setting. You can also use the getAll() method to retrieve all of your site's settings at once. I will show you how to use these methods in the following examples.</p>
 
-            <p>Getting a settings value</p>
+            <p class="center">Getting a settings value</p>
             <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fchadmandoo%2Fchadmandoo.github.io%2Fblob%2Fmain%2Fcode_samples%2Fsettings_utility%2Fsettings_utility_get.php&style=github-dark-dimmed&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
 
-            <p>Getting all setting values</p>
+            <p class="center">Getting all setting values</p>
             <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fchadmandoo%2Fchadmandoo.github.io%2Fblob%2Fmain%2Fcode_samples%2Fsettings_utility%2Fsettings_utility_get_all.php&style=github-dark-dimmed&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
 
             <img src="/images/Settings_dpm_dump.png" alt="Drupal 10 Settings Utility Class - DPM Dump" class="img-fluid">
@@ -61,6 +61,7 @@
 
             <h3>Best Practices</h3>
             <p>It is important to note that while the settings.local.php file is not required, it is not recommended to store settings directly in the settings.php for security reasons, particularly if the code is being committed to a repository. A more secure alternative is to use environmental variables. Here is an example on how to grab environmental variables on Acquia Cloud.</p>
+            <p class="center">Getting an environmental variable</p>
             <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fchadmandoo%2Fchadmandoo.github.io%2Fblob%2Fmain%2Fcode_samples%2Fsettings_utility%2Fsettings_utility_env.php&style=github-dark-dimmed&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
 
             <h3>Search phrases</h3>
