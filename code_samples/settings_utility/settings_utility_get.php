@@ -5,7 +5,6 @@
  */
 use Drupal\Core\Site\Settings;
 
-
 function settings_get_example() {
     // Get the value of a setting.
     $value = Settings::get('my_setting');
