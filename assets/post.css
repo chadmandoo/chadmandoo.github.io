@@ -154,7 +154,6 @@ main {
 }
 .content table * {
   border: 1px solid var(--gray-3);
-  padding: 0.2rem;
 }
 .content img {
   max-width: 100%;
