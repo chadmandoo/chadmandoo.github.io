@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZSVGE7YY2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-EZSVGE7YY2');
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drupal 10 Utility Class - XSS | Chad Peppers</title>
+
+    <link rel="stylesheet" href="/assets/post.css">
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/common.css">
+
+</head>
+
+<body cz-shortcut-listen="true">
+<main>
+    <header>
+        <a class="site-title" href="/">Chad Peppers</a>
+    </header>
+
+    <section class="article">
+        <div class="article-header">
+            <h2 class="article-title">Drupal 10 Utility Class - Settings</h2>
+            <small class="date">1/23/2023</small>
+        </div>
+        <div class="content">
+            <h3>Introduction</h3>
+            <p>
+                Beginning with Drupal 8 a new
+                utility class was <a href="https://api.drupal.org/api/drupal/core!lib!Drupal!Component!Utility!Xss.php/class/Xss" target="_blank">introduced</a> that helps prevent cross-site scripting (XSS) attacks.
+            </p>
+
+            <p>
+                XSS attacks are a common type of security vulnerability that occur when an attacker is able to inject
+                malicious code into a website, which is then executed by the browser of any user who visits the affected
+                site. This can lead to a variety of malicious actions, such as stealing sensitive information or
+                redirecting users to a different site.
+            </p>
+
+            <p>
+            To help protect against XSS attacks, Drupal 10 includes a new utility class called "Xss" that provides a set
+            of methods for sanitizing user-supplied input. This class can be used to filter out potentially dangerous
+            characters and tags from user input, making it much harder for attackers to inject malicious code into a
+            website.
+            </p>
+
+            <p>
+                One of the key features of the Xss class is its ability to automatically detect and remove potentially
+                dangerous input. This is done by using a combination of regular expressions and a whitelist of allowed
+                characters and tags. By default, the class will only allow a small set of safe HTML tags, such as "p"
+                and "a", and will remove any other tags or attributes that could be used to inject malicious code.
+            </p>
+            The Xss class also includes a number of other methods for sanitizing input, including methods for removing
+            JavaScript and other types of code, as well as methods for encoding special characters to prevent them from
+            being interpreted as HTML or JavaScript.
+
+            <p>
+                Using the Xss class is simple, and can be done by calling the class's methods on user-supplied input
+                before displaying it on a website. This helps to ensure that only safe, sanitized input is displayed to
+                users, making it much harder for attackers to inject malicious code. Examples of how to use the Xss class in the next section.
+            </p>
+
+            <h3>Examples</h3>
+            <p>Next we will go over some examples on how to use the XSS class.</p>
+
+            <h4>Xss:filter</h4>
+            <p>
+            In this example, we first import the Xss class using the "use" statement. Then we get the user-supplied input from a form using the $_POST variable. We then pass this input to the Xss::filter method, which automatically detects and removes potentially dangerous characters and tags. Finally, we display the sanitized input on the website using the echo statement.
+            </p>
+
+            <p>
+            The Xss::filter method is the most basic method provided by the Xss class, it is recommended to use it for most cases.
+            </p>
+
+            <h4>Xss:filterAdmin()</h4>
+            <p>This method is similar to the Xss::filter method, but it allows a broader set of HTML tags and attributes, which are considered safe for use in administrative interfaces. The list of admin tags that can be used is accessible either through the API documentation website or by invoking the Xss:getAdminTagList() method.</p>
+
+            <h3>Conclusion</h3>
+            <p>
+                In conclusion, Drupal 10's new Xss utility class is an important addition that helps protect against
+                cross-site scripting attacks. By providing a set of methods for sanitizing user-supplied input, it makes
+                it much harder for attackers to inject malicious code into a website. This is a important step towards
+                making Drupal more secure and is a recommended best practice for any Drupal site.
+            </p>
+            <h3>Search phrases</h3>
+            <h6>How to prevent XSS in Drupal 8 / 9 / 10</h6>
+        </div>
+    </section>
+    <footer>
+        <p>Theme inspired by <a class="site-title" href="https://sharadcodes.github.io/jekyll-theme-serial-programmer/"
+                                target="_blank">Jekyll Serial Programmer</a></p>
+    </footer>
+
+</main>
+</body>
+
+</html>
