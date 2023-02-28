@@ -77,6 +77,7 @@
             <p>Next we will go over some examples on how to use the XSS class.</p>
 
             <h4>Xss:filter</h4>
+            <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fchadmandoo%2Fchadmandoo.github.io%2Fblob%2Fmain%2Fcode_samples%2Fxss_utility%2Fxss_utility_basic.php&style=github-dark-dimmed&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
             <p>
             In this example, we first import the Xss class using the "use" statement. Then we get the user-supplied input from a form using the $_POST variable. We then pass this input to the Xss::filter method, which automatically detects and removes potentially dangerous characters and tags. Finally, we display the sanitized input on the website using the echo statement.
             </p>
@@ -86,6 +87,7 @@
             </p>
 
             <h4>Xss:filterAdmin()</h4>
+            <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fchadmandoo%2Fchadmandoo.github.io%2Fblob%2Fmain%2Fcode_samples%2Fxss_utility%2Fxss_utility_filter_admin.php&style=github-dark-dimmed&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
             <p>This method is similar to the Xss::filter method, but it allows a broader set of HTML tags and attributes, which are considered safe for use in administrative interfaces. The list of admin tags that can be used is accessible either through the API documentation website or by invoking the Xss:getAdminTagList() method.</p>
 
             <h3>Conclusion</h3>
