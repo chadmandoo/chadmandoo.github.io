@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZSVGE7YY2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-EZSVGE7YY2');
+  </script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drupal 10 Utility Class - Settings | Chad Peppers</title>
+
+  <link rel="stylesheet" href="/assets/post.css">
+  <link rel="stylesheet" href="/assets/syntax.css">
+  <link rel="stylesheet" href="/assets/common.css">
+
+</head>
+
+<body cz-shortcut-listen="true">
+<main>
+  <header>
+    <a class="site-title" href="/">Chad Peppers</a>
+  </header>
+
+  <section class="article">
+    <div class="article-header">
+      <h2 class="article-title">Drupal 10 Utility Class - Settings</h2>
+      <small class="date">1/23/2023</small>
+    </div>
+    <div class="content">
+      <h3>Introduction</h3>
+      <p>Drupal 10 provides a utility class, aptly named <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Site%21Settings.php/class/Settings/10" target="_blank">Settings</a>, which provides a simple and secure way to manage read only settings for your Drupal site. This class allows you to store your site's configuration settings in a single location, making it easy to manage and update them as needed.</p>
+
+      <h3>Setup</h3>
+      <p>To take advantage of the Settings class securely, simply create a new file called settings.local.php in your site's /sites/default directory. Add a code to include this file in your settings.php file and add your site specific settings (see examples below) . This file should contain the settings for your site, such as API keys or other environment specific settings.</p>
+
+      <p class="center">Including your settings.local.php file.</p>
+      <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fchadmandoo%2Fchadmandoo.github.io%2Fblob%2Fmain%2Fcode_samples%2Fsettings_utility%2Fsettings_utility_include_local.php&style=github-dark-dimmed&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+
+      <p class="center">Initiating a setting value in your settings.local.php file.</p>
+      <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fchadmandoo%2Fchadmandoo.github.io%2Fblob%2Fmain%2Fcode_samples%2Fsettings_utility%2Fsettings_utility_set.php&style=github-dark-dimmed&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+
+      <h3>Usage</h3>
+      <p>Once you have created your settings.local.php file, you can then use the Settings.php class to access and manage your site's settings. For example, you can use the get() method to retrieve a specific setting, or the set() method to update a setting. You can also use the getAll() method to retrieve all of your site's settings at once. I will show you how to use these methods in the following examples.</p>
+
+      <p class="center">Getting a settings value</p>
+      <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fchadmandoo%2Fchadmandoo.github.io%2Fblob%2Fmain%2Fcode_samples%2Fsettings_utility%2Fsettings_utility_get.php&style=github-dark-dimmed&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+
+      <p class="center">Getting all setting values</p>
+      <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fchadmandoo%2Fchadmandoo.github.io%2Fblob%2Fmain%2Fcode_samples%2Fsettings_utility%2Fsettings_utility_get_all.php&style=github-dark-dimmed&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+
+      <img src="/images/Settings_dpm_dump.png" alt="Drupal 10 Settings Utility Class - DPM Dump" class="img-fluid">
+
+      <h3>Why use settings over configuration?</h3>
+      <p>If you are familiar with Drupal configuration management, you may question the benefits of using settings over configuration. One key advantage is that settings can prevent configuration from being overwritten per environment. Additionally, using settings to store sensitive information, such as API keys, provides an added layer of security by preventing them from being committed to a repository.</p>
+
+      <h3>Best Practices</h3>
+      <p>It is important to note that while the settings.local.php file is not required, it is not recommended to store settings directly in the settings.php for security reasons, particularly if the code is being committed to a repository. A more secure alternative is to use environmental variables. Here is an example on how to grab environmental variables on Acquia Cloud.</p>
+      <p class="center">Getting an environmental variable</p>
+      <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fchadmandoo%2Fchadmandoo.github.io%2Fblob%2Fmain%2Fcode_samples%2Fsettings_utility%2Fsettings_utility_env.php&style=github-dark-dimmed&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+
+      <h3>Search phrases</h3>
+      <h6>How to use custom settings in Drupal 8 / 9 / 10</h6>
+      <h6>How to use variable_set in Drupal 8 / 9 / 10</h6>
+      <h6>How to use variable_get in Drupal 8 / 9 / 10</h6>
+    </div>
+  </section>
+  <footer>
+    <p>Theme inspired by <a class="site-title" href="https://sharadcodes.github.io/jekyll-theme-serial-programmer/"
+                            target="_blank">Jekyll Serial Programmer</a></p>
+  </footer>
+
+</main>
+</body>
+
+</html>
