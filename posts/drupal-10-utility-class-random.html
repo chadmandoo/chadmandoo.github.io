@@ -34,40 +34,37 @@
     </div>
     <div class="content">
       <h3>Introduction</h3>
-      <p>Drupal 10 provides a utility class, aptly named <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Site%21Settings.php/class/Settings/10" target="_blank">Settings</a>, which provides a simple and secure way to manage read only settings for your Drupal site. This class allows you to store your site's configuration settings in a single location, making it easy to manage and update them as needed.</p>
+      <p>The Drupal 10 <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Component%21Utility%21Random.php/10" target="_blank">Random Utility</a> class is a collection of methods for generating random data. It can be useful in a variety of scenarios, such as generating dummy data for testing purposes, creating unique identifiers, or generating random passwords. Let's take a look at each of the methods provided by the class and how they can be used.</p>
+      <h3>Examples</h3>
+      <p>Next we will go over some examples on how to use the Random utility.</p>
 
-      <h3>Setup</h3>
-      <p>To take advantage of the Settings class securely, simply create a new file called settings.local.php in your site's /sites/default directory. Add a code to include this file in your settings.php file and add your site specific settings (see examples below) . This file should contain the settings for your site, such as API keys or other environment specific settings.</p>
+      <h4>name($type = null)</h4>
+      <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fchadmandoo%2Fchadmandoo.github.io%2Fblob%2Fmain%2Fcode_samples%2Frandom_utility%2Frandom_name.php&style=github-dark-dimmed&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+      <p>The name() method generates a random name, which can be useful for generating test data or creating unique usernames. The $type parameter can be used to specify the type of name to generate, such as "male" or "female".</p>
 
-      <p class="center">Including your settings.local.php file.</p>
-      <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fchadmandoo%2Fchadmandoo.github.io%2Fblob%2Fmain%2Fcode_samples%2Fsettings_utility%2Fsettings_utility_include_local.php&style=github-dark-dimmed&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+      <h4>string($length, $characters = null)</h4>
+      <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fchadmandoo%2Fchadmandoo.github.io%2Fblob%2Fmain%2Fcode_samples%2Frandom_utility%2Frandom_string.php&style=github-dark-dimmed&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+      <p>The string() method generates a random string of a specified length. The $characters parameter can be used to specify the set of characters to use in the string, such as lowercase letters or numbers.</p>
 
-      <p class="center">Initiating a setting value in your settings.local.php file.</p>
-      <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fchadmandoo%2Fchadmandoo.github.io%2Fblob%2Fmain%2Fcode_samples%2Fsettings_utility%2Fsettings_utility_set.php&style=github-dark-dimmed&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+      <h4>numeric($min = 0, $max = 100)</h4>
+      <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fchadmandoo%2Fchadmandoo.github.io%2Fblob%2Fmain%2Fcode_samples%2Frandom_utility%2Frandom_numeric.php&style=github-dark-dimmed&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+      <p>The numeric() method generates a random number within a specified range. The $min and $max parameters can be used to specify the range of the generated number.</p>
 
-      <h3>Usage</h3>
-      <p>Once you have created your settings.local.php file, you can then use the Settings.php class to access and manage your site's settings. For example, you can use the get() method to retrieve a specific setting, or the set() method to update a setting. You can also use the getAll() method to retrieve all of your site's settings at once. I will show you how to use these methods in the following examples.</p>
+      <h4>boolean()</h4>
+      <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fchadmandoo%2Fchadmandoo.github.io%2Fblob%2Fmain%2Fcode_samples%2Frandom_utility%2Frandom_boolean.php&style=github-dark-dimmed&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+      <p>The boolean() method generates a random boolean value, either true or false. This can be useful for generating test data or for randomizing behavior in your code.</p>
 
-      <p class="center">Getting a settings value</p>
-      <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fchadmandoo%2Fchadmandoo.github.io%2Fblob%2Fmain%2Fcode_samples%2Fsettings_utility%2Fsettings_utility_get.php&style=github-dark-dimmed&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+      <h4>word($length = 10)</h4>
+      <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fchadmandoo%2Fchadmandoo.github.io%2Fblob%2Fmain%2Fcode_samples%2Frandom_utility%2Frandom_word.php&style=github-dark-dimmed&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+      <p>The word() method generates a random word of a specified length. This can be useful for generating test data or for creating unique identifiers.</p>
 
-      <p class="center">Getting all setting values</p>
-      <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fchadmandoo%2Fchadmandoo.github.io%2Fblob%2Fmain%2Fcode_samples%2Fsettings_utility%2Fsettings_utility_get_all.php&style=github-dark-dimmed&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
-
-      <img src="/images/Settings_dpm_dump.png" alt="Drupal 10 Settings Utility Class - DPM Dump" class="img-fluid">
-
-      <h3>Why use settings over configuration?</h3>
-      <p>If you are familiar with Drupal configuration management, you may question the benefits of using settings over configuration. One key advantage is that settings can prevent configuration from being overwritten per environment. Additionally, using settings to store sensitive information, such as API keys, provides an added layer of security by preventing them from being committed to a repository.</p>
-
-      <h3>Best Practices</h3>
-      <p>It is important to note that while the settings.local.php file is not required, it is not recommended to store settings directly in the settings.php for security reasons, particularly if the code is being committed to a repository. A more secure alternative is to use environmental variables. Here is an example on how to grab environmental variables on Acquia Cloud.</p>
-      <p class="center">Getting an environmental variable</p>
-      <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fchadmandoo%2Fchadmandoo.github.io%2Fblob%2Fmain%2Fcode_samples%2Fsettings_utility%2Fsettings_utility_env.php&style=github-dark-dimmed&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+      <h3>Conclusion</h3>
+      <p>Overall, the Drupal 10 Random Utility class provides a useful set of methods for generating random data in your Drupal project. Whether you need to generate test data, create unique identifiers, or randomize behavior, this class has you covered.</p>
 
       <h3>Search phrases</h3>
-      <h6>How to use custom settings in Drupal 8 / 9 / 10</h6>
-      <h6>How to use variable_set in Drupal 8 / 9 / 10</h6>
-      <h6>How to use variable_get in Drupal 8 / 9 / 10</h6>
+      <h6>How to use random utility class in Drupal 8 / 9 / 10</h6>
+      <h6>How to use get random data  in Drupal 8 / 9 / 10</h6>
+      <h6>Drupal 8 / 9 / 10 random</h6>
     </div>
   </section>
   <footer>
